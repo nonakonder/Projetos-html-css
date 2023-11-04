@@ -1,8 +1,8 @@
 # Projetos-html-css
  Meus Projetos HTML/CSS
 
-Photographer's Portfolio - <a href="https://nonakonder.github.io/Projetos-html-css/Photographer's_portfolio/index.html">
+ <a href="https://nonakonder.github.io/Projetos-html-css/Photographer's_portfolio/index.html">Photographer's Portfolio</a>
 
-Desafio Curso em Video - <a href="https://nonakonder.github.io/Projetos-html-css/Exercicio_CursoEmVideo/index.html">
+ <a href="https://nonakonder.github.io/Projetos-html-css/Exercicio_CursoEmVideo/index.html">Desafio Curso em Video</a>
 
-Projeto Jazz da One Bit Code - <a href="https://nonakonder.github.io/Projetos-html-css/Project_Jazz_One_Bit_Code/index.html">
+<a href="https://nonakonder.github.io/Projetos-html-css/Project_Jazz_One_Bit_Code/index.html">Projeto Jazz da One Bit Code</a>
