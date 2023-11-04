@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif ;
+    text-decoration: none;
+}
+
+:root{
+    --color-primary:#ED4D1B;
+    --color-secondary: #FF9A3C;
+    --color-black:#000;
+    --color-white:#FFF;
+}
+/*a medida de 1rem = 16 px por padrão*/
+/*Configurações gerais da página*/
+body{
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E5 100%);
+    padding: 0 1rem ;
+}
+header, section, footer{
+    border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;    
+}
+/*Configurações da header*/
+header img{
+    /*Imagens são por padrão display:inline-block e para conseguir declarar a margin: auto é preciso declarar que seu comportamento é de um block.*/
+    display: block;
+    margin: 1rem auto;
+}
+header nav{
+    /*Estudar grid, bastante!*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0 auto;
+}
+
+.menu a:nth-child(2n-1)
+{
+    text-align: right;
+}
+
+nav a{
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: .5rem;
+}
+
+header > .button, .content > .button, footer > .button {
+    margin: 1rem auto 1rem auto;
+}
+
+.button{
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    color: var(--color-black);
+    /*Precisamos informar ao .button que é um display block pois ele é um <a> que é naturalmente display:line e portante não iria aceitar margem e padding*/
+    display: block;
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.intro{
+    padding-right: 0;
+    padding-bottom: 16rem;
+}
+
+.intro img{
+    display: block;
+    /*Por definição os blocks são sempre colados a esquerda, logo para fixarmos a direito, é preciso forçar esse comportamento com um padding-right: 0 e o padding-left: auto, que automaticamente corrige o valor do padding da esquerda para colar o padding:0 da direita.*/
+    margin: 1rem 0 0 auto;
+    max-width: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 2rem;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro p {
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 2rem 0;
+}
+
+.intro .button{
+    position: relative;
+}
+.intro .button::after{
+    content:'';
+    position: absolute;
+    background: url(content/arrow-curve.svg);
+    height:48px;
+    width: 132px;
+    top: 5rem;
+    right:-4rem;
+}
+.intro span{
+    position: relative;
+    display: block;
+}
+.intro span::after{
+    content:'';
+    position:absolute;
+    background: url(content/three-dashes.svg);
+    height: 36px;
+    width: 40px;
+    top:-.70rem;
+}
+.content{
+    padding-bottom: 8rem;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 3rem;
+}
+
+.cards article{
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    max-width:17rem;
+    padding: 2rem 0 0 2rem;
+}
+
+.cards > article:nth-child(2n){
+    align-self: end;
+    background-color: var(--color-secondary);
+}
+ article strong{
+    display:block;
+    font-size:1.5rem;
+    margin: 1rem 0;
+ }
+
+ article a{
+    display:block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;
+
+ }
+span {
+    color:var(--color-primary);
+}
+
+/* Estilização footer*/
+
+footer{
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem;
+}
+
+footer nav{
+    display: flex;
+    flex-direction: column;
+}
+footer nav a{
+    padding-left: 0;
+}
+
+form label{
+    display:block;
+    font-size: 1.5rem; 
+}
+
+form input{
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/*Responsividade*/
+
+/*Estudar esse @media aspect*/
+@media screen and (min-width: 40rem){
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav{
+        display: block;
+        text-align: center;
+        margin: 1rem auto;
+        height: fit-content;
+    }
+
+    header img, header nav, header .button{
+        margin: 0;
+    }
+
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards article:nth-child(2n){
+        /*Mais fácil fazer descer do que subir*/
+        margin-top: 2rem;
+    }
+    footer input{
+        max-width: 36rem;
+    }
+    footer > .button {
+        margin: 1rem auto 1rem 0;
+    }
+}
+
+@media screen and (min-width:72rem) {
+    .container{
+        display:flex;
+        flex-direction: row-reverse;
+    }
+    
+}
+
+
+/*Vou deixar em comentário as classes "utilitárias" de margem e alinhamento para utilizar em cada classe primeiramente para observar como se comportam*/
+/*
+.mt-1{
+    margin-top: 1rem;
+}*/
+
+/*
+.mt-2 (margin top 2){
+    margin-top: 2rem;
+}
+.mb-1 (margin bottom 1){
+    margin-bottom: 1rem;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-primary{
+    color: var(--color-primary);
+}
+.text-center{
+    text-align: center;
+}
+*/
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographer's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-content">     
+           <nav>
+                   <!--Usar pseudo class :target para aparecer as section-->
+                   <!-- Usar #nome_da_id faz com que o click interaja com o elemento id-->
+                   <ul class="menu" id="menu">
+                       <li><a href="#home">Home</a></li>
+                       <li><a href="#portfolio">Portfolio</a></li>
+                       <li><a href="#contact">Contact</a></li>
+                   </ul>
+           </nav>
+           <img src="content/profile.png" alt="photographer_profile">
+    </header>
+
+    <main>   
+        <section class="home">
+            <!--Inserir png e adicionar tag shape-outside -->
+            <article>
+                <img id="sunflower" src="content/sunflower.png" alt="sunflower">
+                <img id="photographer" src="content/woman-shooting-left.png" alt="woman with a camera">
+                <h1>Welcome to the Photographer's Portfolio</h1>
+                <p class="subhead">Capturing moments one click at a time.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dolor atque voluptatum, tenetur debitis quibusdam amet esse cumque dolorem deleniti est reprehenderit eveniet explicabo dolorum reiciendis sint molestias distinctio sunt soluta necessitatibus perferendis aperiam eaque. Labore, impedit odit incidunt debitis illum cupiditate vitae cum soluta at, aperiam necessitatibus rem saepe!</p>
+            </article>
+        </section>
+    
+
+    <section class="content" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <div class="photo">
+                <img src="content/photo1.jpg" alt="Photo 1">
+                <p class="description">Photo 1 Caption</p>
+            </div>
+            <div class="photo">
+                <img src="content/photo2.jpg" alt="Photo 2">
+                <p class="description">Photo 2 Caption</p>
+            </div>
+            <div class="photo">
+                <img src="content/photo3.jpg" alt="Photo 3">
+                <p class="description">Photo 3 Caption</p>
+            </div>
+            <div class="photo">
+                <img src="content/photo4.jpg" alt="Photo 4">
+                <p class="description">Photo 3 Caption</p>
+            </div>
+            <div class="photo">
+                <img src="content/photo5.jpg" alt="Photo 5">
+                <p class="description">Photo 3 Caption</p>
+            </div>
+            <div class="photo">
+                <img src="content/photo6.jpg" alt="Photo 6">
+                <p class="description">Photo 3 Caption</p>
+            </div>
+            <span class="arrow-right"></span>
+            <span class="arrow-left"></span>
+        </div>
+    </section>
+
+    <section class="content" id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+        <a id="scroll-up" href="#menu">
+            <div class="scroll-up-button"></div>
+        </a>
+
+   
+    </main>
+    <footer>
+        <p>&copy; 2023 Photographer's Portfolio</p>
+    </footer>
+</body>
+</html>

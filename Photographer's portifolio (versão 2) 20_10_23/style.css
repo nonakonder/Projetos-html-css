@@ -1,0 +1,189 @@
+/* Reset some default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/*Estilização header*/
+.header-content {
+display:flex;
+background-color: pink;
+height: 250px;
+align-items: center;
+justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 75px;
+    list-style: none;
+}
+
+.menu li:nth-child(2n-1){
+    align-self: flex-end;  
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-content img{
+    margin-left: -10px;
+}
+/*Fim estilização da header*/
+
+/*Estilização da main*/
+/*default section settings*/
+
+section {
+    display:block;
+    padding: 40px 10px 40px 10px; 
+    width: 900px; 
+    margin: auto;
+
+}
+/*Default settings for .content sections*/
+.content{
+    text-align: center; 
+    background-color: aqua;
+}
+/*!!Colocar uma seta dentro da section .content para ir para o topo*/
+
+/* Escondendo sections */
+section:not(.home) {
+    display: none;
+}
+
+/*Aparecendo sections*/
+section:target{
+    display:block;
+}
+/*Estilização home*/
+.home{
+    height: 381px;
+}
+article p{
+    text-align: justify;
+}
+
+#sunflower{
+    float: left; 
+    shape-outside: circle(50%);
+    margin: 0 10px 1px 0;
+}
+
+#photographer{
+    float: right;   
+    shape-outside: url(content/woman-shooting-left.png);
+    shape-margin: 20px;
+}
+
+.home h1{
+    text-align: center;
+}
+.subhead{
+    text-align: end;
+    padding: 15px;
+}
+
+/*Estilização portfolio*/
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.arrow-left, .arrow-right{
+    position:absolute;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 6px;
+    margin: 10px;
+}
+.arrow-left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    top: 50%;
+    left: 0;
+}
+.arrow-right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); 
+    top:50%;
+    right:0;
+}
+
+.photo {
+    margin: 10px;
+    width: 250px;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #6d2828;
+}
+
+form label, form textarea, form input, form button {
+    display: block;
+    margin: 10px 0;
+}
+
+#scroll-up{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 10px;
+
+}
+.scroll-up-button{
+    position: relative;
+    padding: 5px;
+    margin: 10px auto;
+    background: #000;
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: all 0.2s linear;  
+}
+
+.scroll-up-button:hover{
+    transform: translate3d(0, -10px, 0);
+}
+.scroll-up-button::after{
+  content: "";
+  position: absolute;
+  left: 17px;
+  z-index: 11;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  top: 14px;
+  left: 10.5px;
+  transform: rotate(45deg);
+}
+
+/*Fim estilização da main*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
