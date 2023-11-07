@@ -1,5 +1,5 @@
 # Projetos-html-css
- Meus Projetos HTML/CSS
+ Meus Estudos HTML/CSS
 
  <a href="https://nonakonder.github.io/Projetos-html-css/Photo-portfolio/index.html">Photographer's Portfolio</a>
 
